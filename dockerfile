@@ -1,12 +1,12 @@
-From debian:latest As build
+From ubuntu:latest As build
 
-RUN sudo apt update
-RUN sudo apt install openjdk-17-jdk -y
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
 
 
 COPY . .
 
-RUN sudo apt install maven -y
+RUN apt-get install maven -y
 RUN mvn clean install
 
 
