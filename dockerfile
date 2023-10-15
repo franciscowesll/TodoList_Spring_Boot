@@ -3,6 +3,8 @@ From debian:latest As build
 RUN sudo apt update
 RUN sudo apt install openjdk-17-jdk -y
 
+FROM openjdk: 17-jdk-slim
+
 COPY . .
 
 RUN sudo apt install maven -y
